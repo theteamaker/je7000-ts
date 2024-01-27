@@ -1,0 +1,10 @@
+{
+  "guilds": [
+    {
+      "name": "ExampleGunner",
+      "guild_id": 123,
+      "qoc_channel_id": 456,
+      "op_channel_id": 789
+    }
+  ]
+}

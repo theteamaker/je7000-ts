@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1"
+  },
+  "name": "je7000-ts",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "compileandstart": "tsc && npm run start",
+    "start": "node -r dotenv/config ./dist/index.js",
+    "noenvstart": "node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
