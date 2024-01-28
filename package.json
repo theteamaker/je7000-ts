@@ -14,9 +14,10 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "compileandstart": "tsc && npm run start",
+    "compstart": "tsc && npm run start",
     "start": "node -r dotenv/config ./dist/index.js",
-    "noenvstart": "node ./dist/index.js"
+    "noenvstart": "node ./dist/index.js",
+    "deploy": "node -r dotenv/config ./dist/utils/deploy_commands.js"
   },
   "keywords": [],
   "author": "",

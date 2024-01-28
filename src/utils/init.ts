@@ -1,15 +1,16 @@
 import fs from "fs";
 
 interface GuildDetails {
-  guild_id: number;
-  qoc_channel_id: number;
-  op_channel_id?: number;
+  guild_id: string;
+  qoc_channel_id: string;
+  op_channel_id?: string;
+  ignore_pinned_message_ids: string[];
 }
 
 const guildsJSONFileString: string = fs.readFileSync("guilds.json").toString();
 const guildsJSON = JSON.parse(guildsJSONFileString);
 
-const guilds: Map<string, GuildDetails> = new Map();
+export const guilds: Map<string, GuildDetails> = new Map();
 
 if (guildsJSON.guilds.length === 0) {
   throw new Error("Guilds have not been properly set in guilds.json. Exiting.");
@@ -22,6 +23,7 @@ for (var i = 0, guild; i < guildsJSON.guilds.length; i++) {
     guild_id: guild.guild_id,
     qoc_channel_id: guild.qoc_channel_id,
     op_channel_id: guild.op_channel_id,
+    ignore_pinned_message_ids: guild.ignore_pinned_message_ids,
   });
 }
 /* eslint-enable */

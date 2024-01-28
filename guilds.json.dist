@@ -4,7 +4,8 @@
       "name": "ExampleGunner",
       "guild_id": 123,
       "qoc_channel_id": 456,
-      "op_channel_id": 789
+      "op_channel_id": 789,
+      "ignore_pinned_message_ids": [0, 1, 2]
     }
   ]
 }
