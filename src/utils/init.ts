@@ -27,9 +27,17 @@ for (var i = 0, guild; i < guildsJSON.guilds.length; i++) {
 /* eslint-enable */
 
 export const tokenEnv: string | undefined = process.env["TOKEN"];
+export const clientIdEnv: string | undefined = process.env["CLIENT_ID"];
 
 if (tokenEnv == undefined || tokenEnv === "") {
-  throw new Error("[ERROR] Token has not been properly set in .env. Exiting.");
+  throw new Error("[ERROR] TOKEN has not been properly set in .env. Exiting.");
+}
+
+if (clientIdEnv == undefined || clientIdEnv === "") {
+  throw new Error(
+    "[ERROR] CLIENT_ID has not been properly set in .env. Exiting."
+  );
 }
 
 export const token: string = tokenEnv;
+export const clientId: string = clientIdEnv;
