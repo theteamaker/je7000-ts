@@ -74,4 +74,16 @@ client.on(Events.InteractionCreate, async (interaction) => {
   }
 });
 
+client.on(Events.MessageCreate, async (interaction) => {
+  if (
+    interaction.author.id == "310154766699200512" &&
+    interaction.channel.id == "455192909084360705"
+  ) {
+    if (interaction.attachments.size > 0) {
+      await interaction.delete();
+      await interaction.channel.send("treydog1357 preventative measures");
+    }
+  }
+});
+
 client.login(token);
